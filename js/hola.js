@@ -29,6 +29,7 @@ else if (Edad < Edad2){
 else {
     alert("Tu hermano y tu tienen la misma edad, son mellizos???")
 }
+.
 
 
 
