@@ -7,3 +7,15 @@
 .style-con-index {
     background-color: rgba(210, 58, 3, 0.578); border-radius: 7px; height: 30rem;
 }
+.navbar{
+    background-color:salmon;
+}
+.boton{
+    color: whitesmoke;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: none !important;
+}
+.boton:hover{
+    background-color: whitesmoke;
+    color: black;
+}
