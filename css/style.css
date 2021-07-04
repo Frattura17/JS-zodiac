@@ -1,19 +1,26 @@
+body{
+    background-color:whitesmoke;
+}
 .style-col-index > a {
-    text-decoration: none; color: whitesmoke; font-size: 1.15rem; font-weight: bold;
+    /* text-decoration: none; color: rgb(3, 3, 3); font-size: 1.15rem;*/ 
+    font-weight: 600;
 }
 .style-col-index > a:hover{
-    color:midnightblue;
+    background-color:rgb(241, 241, 250);
+    color: rgba(0, 128, 128, 0.852) !important;
 }
 .style-con-index {
-    background-color: rgba(210, 58, 3, 0.578); border-radius: 7px; height: 30rem;
+    
 }
 .navbar{
-    background-color:salmon;
+    background-color:#0d6a3fcb;
+    top: 0%;
 }
 .boton{
     color: whitesmoke;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     box-shadow: none !important;
+    font-size: 1.12rem;
 }
 .boton:hover{
     background-color: whitesmoke;

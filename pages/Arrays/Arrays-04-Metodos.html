@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Primeras Funciones</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg w-100 position-fixed">
+        <div class="container-fluid">
+          <a class="navbar-brand boton btn" href="../../index.html"><img src="../../assets/2048px-Unofficial_JavaScript_logo_2.svg.png" style="width: 2.5rem;" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active boton btn me-2" aria-current="page" href="pages/pages-bucles.html">Bucles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active boton btn" aria-current="page" href="pages/Arrays/arrays.html">Arrays</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <br><br><br><br>
+        <div class="row">
+          <h1 class="display-2">INTRODUCCIÓN A METODOS - JS</h1>
+          <h2 class="lead">Ejercicios, ejemplos para comenzar a utilizar JS</h2>
+          <hr>
+          <h2>Temas</h2>
+          <p>Páginas con los ejemplos y ejercicios que hemos ido trabajando</p>
+          <p>Array trabajado</p>
+          <code class="display-6 mb-3"> [ 10, 20, 30, 40, 32, 89, 54]</code>
+        <div class="col style-col-index mt-2 text-black-50">
+
+            <button class="btn btn-warning m-1" onclick="arraymap()"
+           data-bs-toggle="collapse" data-bs-target="#array-map" aria-expanded="false" aria-controls="array-map">Map</button>
+           
+           <button class="btn btn-warning m-1" onclick="ArrayFilter()"
+           data-bs-toggle="collapse" data-bs-target="#array-filter" aria-expanded="false" aria-controls="Array-filter">Filter</button>
+
+           <button class="btn btn-warning m-1" onclick="ArrayFind()"
+           data-bs-toggle="collapse" data-bs-target="#Array-Find" aria-expanded="false" aria-controls="Array-Find">Find</button>
+           
+           <button class="btn btn-warning m-1" onclick="ArrayFill()"
+           data-bs-toggle="collapse" data-bs-target="#Array-Fill" aria-expanded="false" aria-controls="Array-Fill">Fill</button>
+
+            <div class="collapse mt-2" id="array-map">
+                <div class="card card-body">
+                    El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+                </div>
+              </div>
+
+              <div class="collapse mt-2" id="array-filter">
+                <div class="card card-body">
+                    El método filter() crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
+                </div>
+              </div>
+              
+             <div class="collapse mt-2" id="#Array-Find">
+                <div class="card card-body">
+                    El método find() devuelve el valor del primer elemento del array que cumple la función de prueba proporcionada.
+                </div>
+              </div>
+              
+             <div class="collapse mt-2" id="#Array-Fill">
+                <div class="card card-body">
+                    El método findIndex() devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.
+                </div>
+              </div>
+         </div>
+     </div>
+ </div>
+ <BR></BR><BR></BR><BR></BR><BR></BR><BR></BR><BR></BR><BR></BR><BR></BR><BR></BR><BR></BR><BR></BR><BR></BR><BR></BR><BR></BR><BR></BR>
+<script src="../../js/ARRAYS/04-Arrays-Metodos.js"></script>
+
+    
+</body>
+</html>

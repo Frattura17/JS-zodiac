@@ -1,7 +1,7 @@
 
 let copa = ["Uruguay","Uruguay","Argentina","Brasil","Uruguay","Uruguay","Argentina","Uruguay","Argentina","Argentina","Uruguay","Argentina","Peru","Argentina","Uruguay","Argentina","Argentina","Argentina","Brasil","Paraguay","Argentina","Uruguay","Argentina","Argentina","Uruguay","Bolivia","Uruguay","Peru","Paraguay","Uruguay","Uruguay","Brasil","Argentina","Argentina","Uruguay","Brasil","Brasil","Colombia","Brasil","Brasil","Uruguay","Chile","Chile","Brasil"]
 
-function ArrayMap() {
+function arraymap() {
 
 let dolar = [window.prompt("Ingrese un valor positivo de dolares")];
 let pesos = dolar.map(function(valor) {
