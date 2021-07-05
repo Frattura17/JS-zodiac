@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos y Clases en JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg w-100 position-fixed">
+    <div class="container-fluid">
+      <a class="navbar-brand boton btn" href="../../index.html"><img src="../../assets/2048px-Unofficial_JavaScript_logo_2.svg.png" style="width: 2.5rem;" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active boton btn me-2" aria-current="page" href="../Bucle-For/bucle-For.html">Bucles</a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="nav-link active boton btn" aria-current="page" href="../Arrays/arrays.html">Arrays</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active boton btn" aria-current="page" href="">POO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active boton btn" aria-current="page" href="">BOM</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav><br><br><br>
+      <div class="container-xl py-4 px-2">
+        <div class="row">
+          <h1 class="display-5 text-center m-3">PROGRAMACIÓN ORIENTADA A OBJETOS - <strong>POO</strong></h1>
+          <h2 class="lead">Oriented object programming (OOP)</h2>
+          <hr>
+          <h2>Objetos</h2>
+          <p>Opciones para crear objetos</p>
+          <div class="container-xl py-4 px-3">
+            <div class="row">
+              <pre class="display-6 mb-3">
+                let user = {
+                  name: 'Jhon,
+                  lastname: 'Doe',
+                  age: 28,
+                  bornDate: '19/11/1987'
+                }
+              </pre>
+              <div class="col-3">
+                <button class="btn btn-warning" onclick="objectLiteral()">Object Literal</button>
+              </div>
+              <div class="col-3">
+              <button class="btn btn-warning" onclick="funcionConstruc()">Funcion Contructora</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    
+    <script src="../../js/OBJECT/literal-01.js"></script>
+    <script src="../../js/OBJECT/func-cons-01.js"></script>
+</body>
+</html>

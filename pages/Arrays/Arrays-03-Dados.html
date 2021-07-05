@@ -5,14 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>Juego Dados</title>
 </head>
 <body>
-    <div class="bg-dark p-4 ps-5">
-        <a href="arrays.html" style="text-decoration: none; color: whitesmoke; font-weight: 400;font-size: 1.3rem;">
-        VOLVER</a>
-</div>
-<script src="../../js/ARRAYS/03-Arrays-Dados.js"></script>
+    <nav class="navbar navbar-expand-lg w-100 position-fixed">
+        <div class="container-fluid">
+          <a class="navbar-brand boton btn" href="../../index.html"><img src="../../assets/2048px-Unofficial_JavaScript_logo_2.svg.png" style="width: 2.5rem;" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active boton btn me-2" aria-current="page" href="../pages-bucles.html">Bucles</a>
+              </li>
+              <li class="nav-item me-2">
+                <a class="nav-link active boton btn" aria-current="page" href="arrays.html">Arrays</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active boton btn" aria-current="page" href="../objects/objects.html">POO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active boton btn" aria-current="page" href="">BOM</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav><br><br><br>
+       <div class="container">
+         <h1 class="display-5 m-4 ms-0">| Ejercicio de dados - JS</h1>
+         <p">
+          Escribir un script que simule el lanzamiento de dos dados. Hacer uso de la función Math.random para obtener números aleatorios entre 1 y 6 para cada uno de los lanzamientos de los dados. Sumar el resultado de lanzar dos dados y anotar en un array el número de apariciones de dicha suma, repitiendo 5 veces esta operación. 
+          El lanzamiento será para cada jugador por turno tenemos que tener 3 jugadores, al final se deberá hacer una suma.
+         </p>
+        </div>
+  
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-4 col-2 gy-3">
+                  <button class="btn btn-primary " onclick="player1()">Jugador 1</button>
+              </div>
+              <div class="col-sm-4 col-2 gy-3">
+                  <button class="btn btn-primary " onclick="player2()">Jugador 2</button>
+              </div>
+              <div class="col-sm-4 col-2 gy-3">
+                  <button class="btn btn-primary " onclick="player3()">Jugador 3</button>
+              </div>
+              <div class="col-sm-4 col-2 gy-3">
+                  <button class="btn btn-primary " onclick="player4()">Jugador 4</button>
+              </div>
+              <div class="col-sm-4 col-2 gy-3">
+                  <button class="btn btn-primary " onclick="player5()">Jugador 5</button>
+              </div>
+          </div>
+      </div>
+      
+<script src="../../js/ejercicioDados.js"></script>
 
     
 </body>
