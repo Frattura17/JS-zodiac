@@ -9,9 +9,7 @@ body{
     background-color:rgb(241, 241, 250);
     color: rgba(0, 128, 128, 0.852) !important;
 }
-.style-con-index {
-    
-}
+
 .navbar{
     background-color:#0d6a3fcb;
     top: 0%;
@@ -25,4 +23,9 @@ body{
 .boton:hover{
     background-color: whitesmoke;
     color: black;
+}
+.clock {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color: dodgerblue
 }

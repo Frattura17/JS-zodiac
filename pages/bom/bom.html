@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos y Clases en JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg w-100 position-fixed">
+        <div class="container-fluid">
+          <a class="navbar-brand boton btn" href="../../index.html"><img src="../../assets/2048px-Unofficial_JavaScript_logo_2.svg.png" style="width: 2.5rem;" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active boton btn me-2" aria-current="page" href="../pages-bucles.html">Bucles</a>
+              </li>
+              <li class="nav-item me-2">
+                <a class="nav-link active boton btn me-2" aria-current="page" href="../Arrays/arrays.html">Arrays</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active boton btn me-2" aria-current="page" href="../objects/objects.html">POO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active boton btn me-2" aria-current="page" href="bom.html">BOM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active boton btn" aria-current="page" href="../dom/dom.html">DOM</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br><br><br><br>
+    <div class="container-xl pb-4 px-3">
+        <div class="row">
+            <h1 class="display-4">| BROWSER OBJECT MODEL <strong> [ BOM ]</strong></h1>
+            <h2 class="lead ms-3">Permite a Javascript hablar al Navegador</h2>
+            <hr class="ms-3">
+
+            <div class="col-sm-12 col-lg-9 ">
+                <h2>EL OBJETO <strong>WINDOW</strong> </h2>
+                <p>
+                    <ul class="list-bom">
+                        <li>Todas los objetos globales, funciones y variables se tornan miembros del <strong>objeto
+                                window</strong> </li>
+                        <li>Variables globales son propeiedades del objeto windows</li>
+                        <li>Funciones globales son métodos de window object.</li>
+                        <li>Incluso el <strong>document object</strong> (HTML DOM) es una propiedad de window object
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    <button class="btn btn-primary" onclick="browserDetect()">
+                        Detectar navegador
+                    </button>
+                </p>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="browser-container">
+                            <div id="browserName">
+                                <h1> Holas</h1>
+                            </div>
+                            <div id="browserImg">
+                                Imagen
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="clock" id="clock">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-12 col-lg-3">
+                <h3 class="lead fw-normal">DOCUMENTACIÓN ÚTIL</h3>
+                <ul class="list-bom">
+                    <li>
+                        <a href="https://campus.rollingcodeschool.com/course/view.php?id=76" target="_blank">
+                            RollingCode - Campus</a>
+                    </li>
+                    <li class="list-bom">
+                        <a href="https://www.w3schools.com/js/js_window.asp" target="_blank">
+                            W3Schools - Javascript Window</a>
+                    </li>
+                    <li class="list-bom">
+                        <a href="https://developer.mozilla.org/es/docs/Web/API/Window" target="_blank">
+                            MDN - Window</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+            <!-- <div class="container-xl py-4 px-3">
+            <div class="row">
+              <pre class="display-6 mb-3">
+                let user = {
+                  name: 'Jhon,
+                  lastname: 'Doe',
+                  age: 28,
+                  bornDate: '19/11/1987'
+                }
+              </pre>
+              <div class="col">
+                <button class="btn btn-warning" onclick="objectLiteral()">Object Literal</button>
+            </div>
+          </div> -->
+        </div>
+    </div>
+<script src="../../js/bom/bom.js"></script>
+</body>
+
+</html>
