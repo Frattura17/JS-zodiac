@@ -34,14 +34,14 @@
   </nav><br><br><br>
       <div class="container-xl py-4 px-2">
         <div class="row">
-          <h1 class="display-5 text-center m-3">PROGRAMACIÓN ORIENTADA A OBJETOS - <strong>POO</strong></h1>
-          <h2 class="lead">Oriented object programming (OOP)</h2>
-          <hr>
+          <h2 class="display-5 m-3 ms-0">| PROGRAMACIÓN ORIENTADA A OBJETOS - <strong>POO</strong></h2>
+          <h3 class="lead ms-3">Oriented object programming (OOP)</h3>
+          <hr class="ms-3">
           <h2>Objetos</h2>
           <p>Opciones para crear objetos</p>
-          <div class="container-xl py-4 px-3">
+  
             <div class="row">
-              <pre class="display-6 mb-3">
+              <pre class="mb-3 mt-3">
                 let user = {
                   name: 'Jhon,
                   lastname: 'Doe',
@@ -49,17 +49,27 @@
                   bornDate: '19/11/1987'
                 }
               </pre>
-              <div class="col-3">
+    
+              <div class="col-3 text-center">
                 <button class="btn btn-warning" onclick="objectLiteral()">Object Literal</button>
               </div>
-              <div class="col-3">
+              <div class="col-3 text-center">
               <button class="btn btn-warning" onclick="funcionConstruc()">Funcion Contructora</button>
               </div>
+              <div class="col-3 text-center">
+                <button class="btn btn-warning" onclick="clases()">Clases en Objetos</button>
+              </div>
+                <div class="col-3 text-center">
+                  <button class="btn btn-warning" onclick="classExtends()">Clases y extensiones</button>
+              </div>
+
           </div>
         </div>
       </div>
     
     <script src="../../js/OBJECT/literal-01.js"></script>
     <script src="../../js/OBJECT/func-cons-01.js"></script>
+    <script src="../../js/OBJECT/class.js"></script>
+    <script src="../../js/OBJECT/class-extends.js"></script>
 </body>
 </html>
