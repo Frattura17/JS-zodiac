@@ -56,6 +56,16 @@ function borrarTodo(index) {
     renderizarLista();
 }
 
+function borrar(index) {
+    console.log(index);
+    // borro el  item del arreglo
+    arrayListaSuper.splice(index,1);
+    // actualizar el localstorage
+    localStorage.setItem("items", JSON.stringify(arrayListaSuper));
+    // vovlver a dibujar la lista
+    renderizarLista();
+}
+
 function editarItem(event) {
    // COMPLETAR!!!!!
 }

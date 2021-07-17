@@ -7,6 +7,7 @@ let div = document.getElementById('elemento');
 let p = document.createElement('p');
 
 //Insertar texto o contenido en el nodo
+
 // p.textContent = '<strong>Append Text</strong>';
 // p.innerText = '<strong class="text-danger">Append Text</strong>';
 p.innerHTML = '<strong class="text-danger">Append Text</strong>';
@@ -24,10 +25,12 @@ newContent.classList.add('text-white', 'fs-3', 'text-center');
 newContent.style.backgroundColor = '#000';
 // console.log(pQuery)
 let oldElement = document.getElementsByClassName('text-gray');
+
 //Como getElementsByClassName devuelve un array, necesito acceder al elemento buscado a través de su indice
 console.log(oldElement[0])
 
 //Reemplazar un nodo
+
 // div.replaceChild(newContent, oldElement[0]);
 //Insertar un nuevo elemento antes de otro -> oldElemento
 // div.insertBefore(newContent, oldElement[0]);
