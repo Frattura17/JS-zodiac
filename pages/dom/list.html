@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg w-100 position-fixed">
+        <div class="container-fluid">
+          <a class="navbar-brand boton btn" href="../../index.html"><img src="../../assets/2048px-Unofficial_JavaScript_logo_2.svg.png" style="width: 2.5rem;" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class=" active boton btn me-2" style="font: weight 250;" aria-current="page" href="../pages-bucles.html">Bucles</a>
+              </li>
+              <li class="nav-item me-2">
+                <a class=" active boton btn me-2" style="font: weight 250;" aria-current="page" href="../Arrays/arrays.html">Arrays</a>
+              </li>
+              <li class="nav-item">
+                <a class=" active boton btn me-2" style="font: weight 250;" aria-current="page" href="../objects/objects.html">POO</a>
+              </li>
+              <li class="nav-item">
+                <a class=" active boton btn me-2" style="font: weight 250;" aria-current="page" href="../bom/bom.html">BOM</a>
+              </li>
+              <li class="nav-item">
+                <a class=" active boton btn me-2" style="font: weight 250;" aria-current="page" href="dom.html">DOM</a>
+              </li>
+              <li class="nav-item">
+                <a class=" active boton btn" style="font: weight 250;" aria-current="page" href="list.html">LS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br><br><br>
+    <main>
+        <section>
+            <div class="bgVerde p-2 mb-5">
+                <div class="container my-4">
+                    <h1 class="display-4">Practica de localstorage</h1>
+                    <p class="lead">En este ejemplo practicaremos con un array de items almacenados en localstorage</p>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="row">
+                <article class="col-6">
+                    <h2 class="text-uppercase">Ingrese un producto a la lista</h2>
+                    <div class="d-flex w-100 my-4">
+                        <form action="" id="addProduct" class="me-1 w-100" onsubmit="return false">
+                            <input type="text" placeholder="ej: Jabon" class="form-control me-1" id="productoInput"
+                                onkeyup="agregarProducto(event)">
+                        </form>
+                        <button class="btn btn-primary me-1" onclick="agregarProducto()">Agregar</button>
+                        <button class="btn btn-danger me-1" onclick="borrarTodo()">Borrar</button>
+                    </div>
+                    <hr class="my-2">
+                    <h2 class="text-primary">FORMULARIO</h2>
+                    <form action="saludar()" id="myForm">
+                        <div class="mb-3">
+                            <label for="">Nombre</label>
+                            <input type="text" name="nombre" class="form-control" value="pepehola" required onkeyup="checkearValidez()">
+                            <!-- onkeyup="checkValidy()" -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Apellido</label>
+                            <input type="text" name="surname" class="form-control" required minlength="5" value="Doe" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Email</label>
+                            <input type="email" name="email" class="form-control" required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Edad</label>
+                            <input type="number" name="age" class="form-control" required min="18">
+                        </div>
+                        <select name="gender" id="" class="form-select w-50 mb-3">
+                            <option value="female">Mujer</option>
+                            <option value="male">Hombre</option>
+                            <option value="none" selected>Sin definir</option>
+                        </select>
+                        <a class="btn btn-success disabled" id="submit" onclick="saveUser()">Crear</a>
+                    </form>
+                </article>
+                <article class="text-center col-6">
+                    <h5 class="display-4">Lista de compras</h5>
+                    <div class="mb-3">
+                        <label for="">Buscar</label>
+                        <input type="text" name="search" class="search form-control" required>
+                    </div>
+                    <p class="fw-light">Seleccione el item de la lista que desee eliminar</p>
+
+                    <ul class="list-group my-5" id="listaProductos">
+                    </ul>
+
+                    <div class="cube">
+                        <div class="cubeTwo">
+
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <div class="modal fade" id="cambiarValor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="modal-form">
+                        <div class="mb-3">
+                          <label for="name" class="col-form-label">Recipient:</label>
+                          <input type="text" class="form-control" id="new-value">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" onclick="changeElement()">Cambiar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="../../js/dom/local-storage.js"></script>
+    <script src="../../js/dom/forms.js"></script>
+</body>
+
+</html>

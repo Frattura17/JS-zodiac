@@ -1,66 +1,46 @@
-let div = document.getElementById('elemento');
-// let pEl = document.getElementsByTagName('p');
-// let pElQuery = document.querySelectorAll('button.btn');
-// let pElClass = document.getElementsByClassName('btn');
-
-//Crear nodo
-let p = document.createElement('p');
-
-//Insertar texto o contenido en el nodo
-
-// p.textContent = '<strong>Append Text</strong>';
-// p.innerText = '<strong class="text-danger">Append Text</strong>';
-p.innerHTML = '<strong class="text-danger">Append Text</strong>';
-// p.textContent = 'Append Text';
-// console.log(pElClass);
-div.append(p);
-//me devuelve un array de elemenyos que coincide con el parámetro pasado al método
-let pQuery = document.getElementsByClassName('query');
-console.log(pQuery[1].classList);
-pQuery[1].classList.add('p-4');
-
-let newContent = document.createElement('p');
-newContent.innerHTML = `Este es un <strong>ELEMENTO</strong> nuevo generado y que va a ser insertado posteriormente como <span class="text-warning"> hijo en otro nodo</span>`;
-newContent.classList.add('text-white', 'fs-3', 'text-center');
-newContent.style.backgroundColor = '#000';
-// console.log(pQuery)
-let oldElement = document.getElementsByClassName('text-gray');
-
-//Como getElementsByClassName devuelve un array, necesito acceder al elemento buscado a través de su indice
-console.log(oldElement[0])
-
-//Reemplazar un nodo
-
-// div.replaceChild(newContent, oldElement[0]);
-//Insertar un nuevo elemento antes de otro -> oldElemento
-// div.insertBefore(newContent, oldElement[0]);
-
-//Como blanquear los hijos de un nodo y como añadir un elemento
-// div.innerHTML = '';
-// div.appendChild(newContent);
+// let padre = document.getElementsByClassName('padre'); //devuelve un array HTMLcollection
+//acceder al primer elemento
+// console.log(padre[0]);
 
 
-// div.innerHTML = newContent;
-let pClone = document.querySelector('.text-gray');
-div.append(pClone.cloneNode(false));
-// console.log('FirstChilde del Div',  );
+let padre = document.getElementById('padre2');
+// let padre = document.querySelectorAll('.abuelo > div');
+// let padre = document.getElementsByClassName('padre');
+// let padre = document.querySelector('.padre');
+
+let hijos = padre.children;
+
+let hijo = document.getElementById('hijo1');
+let padre2 = hijo.parentElement;
+let abuelo2 = padre2.parentElement;
+console.log('padre2', padre2);
+console.log('abuelo2', abuelo2);
+
+let abuelo3 = hijo.closest('#granpa');
+console.log('abuelo3', abuelo3);
+
+let hermanoAnterior = hijo.previousElementSibling;
+let hermanoSiguiente = hijo.nextElementSibling;
+console.log(hermanoAnterior);
+cambiarEstilos(hermanoAnterior);
+cambiarEstilos(hermanoSiguiente);
 
 
-let buttons = document.getElementsByClassName('btn');
-console.log('Botones:', buttons);
 
-for (let i = 0; i < buttons.length; i++) {
-        // Como busco elementos que NO tengan valor disabled uso el operador NOT para invertir el resultado de la condición
-        if(!buttons[i].classList.contains('disabled')){
-            buttons[i].classList.remove('disabled');
-        }
+//como me devuelve una HTML Collection y no puedo usar los métodos de un array lo transformo
+hijos = Array.from(hijos);
+
+
+// hijos.forEach(el => {
+//     cambiarEstilos(el);
+// });
+// For in se usa para recorrer los nombres de las propiedades de los objetos
+// For of se usa para recorrer los valores de un array
+// for(el of padre) {
+//     console.log(el);
+// }
+
+function cambiarEstilos(el) {
+     el.style.backgroundColor = '#333';
+     el.classList.add('encontrado');
 }
-
-let imgRef = document.getElementById('zodiac');
-console.log(imgRef.src);
-
-setInterval(function() {
-    let randomNumber = parseInt(Math.random() * 6) + 1;
-    imgRef.src = `/assets/images/zodiac/${randomNumber}.jpg`;
-}, 500)
-

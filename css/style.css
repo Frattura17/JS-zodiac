@@ -1,7 +1,7 @@
 body{
     background-color:whitesmoke;
 }
-.style-col-index > a {
+.style-col-index > a{
     /* text-decoration: none; color: rgb(3, 3, 3); font-size: 1.15rem;*/ 
     font-weight: 600;
 }
@@ -15,17 +15,59 @@ body{
     top: 0%;
 }
 .boton{
-    color: whitesmoke;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: whitesmoke !important;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
     box-shadow: none !important;
-    font-size: 1.12rem;
+    font-size: 1.12rem !important;
 }
 .boton:hover{
     background-color: whitesmoke;
-    color: black;
+    color: black !important;
 }
 .clock {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2rem;
     color: dodgerblue
+}
+.abuelo, .padre, .hijo {
+    border: 3px solid black;
+    padding: 2rem 3rem;
+    margin: 10px;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.abuelo {
+    background-color: rgb(25, 105, 185);
+}
+
+.padre {
+    background-color: rgb(19, 131, 243);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hijo {
+    background-color: rgb(113, 173, 233);
+    flex: 1;
+}
+
+.encontrado {
+    color: red;
+    border: 3px solid red
+}
+
+.bgVerde{
+    background-color: var(--js-bg);
+}
+
+.cube {
+    padding: 4rem;
+    border: 2px solid #333;
+    background-color: hsl(240, 100%, 70%);
+}
+.cubeTwo {
+    padding: 4rem;
+    border: 2px solid #333;
+    background-color: hsl(240, 90%, 60%);
 }
